@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-color: #1F1F1F;
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 24;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* SECTIONS */
+
+.dark {
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 45vh;
+}
+.section > * {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Main css*/
+
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+.btns > a {
+    margin: 5px;
+}
+
+.animBtn {
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+}
+
+.btn {
+  background: #a14336;
+  border-radius: 999px;
+  box-shadow: #a14336 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 4px 9px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  text-decoration: none;
+}
+
+
+.link {
+  color: #e05d5d;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+.name {
+  font-size: 2rem;
+  position: relative;
+  position: relative;
+  width: max-content;
+  font-weight: 200
+}
+
+.name::before,
+.name::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.name::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.name::after {
+  width: 0.125em;
+  background: rgb(158, 158, 158);
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+  color: rgba(219, 219, 219, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Projects */
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #272727;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.project > img {
+    border-radius: .5rem;
+    
+}
+
+.project > * {
+    margin-bottom: 10px;
+}
