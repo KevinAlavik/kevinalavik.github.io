@@ -93,7 +93,7 @@ a {
   cursor: pointer;
 }
 
-.aboutMe {
+.aboutMe > p{
   text-align: center;
   font-size: 15px;
   max-width: 50vw
