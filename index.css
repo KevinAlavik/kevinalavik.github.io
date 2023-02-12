@@ -1,158 +1,162 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #000000;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: hidden;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #000000;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	overflow: hidden;
 }
 
 .top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 0 1rem;
-  background-color: #090a09;
-  height: 45px;
-  border-bottom: 1px solid #1f1f1f;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 1rem;
+	/* padding: 0.5rem 1rem 0 1rem; */
+	background-color: #090a09;
+	height: 45px;
+	border-bottom: 1px solid #1f1f1f;
 }
+
+.top > div {
+	cursor: pointer;
+}
+
+.top > div:first-of-type {
+	/* background-color: red; */
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.dir-name {
+	width: 100%;
+	text-align: center;
+}
+
 .search1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 1rem 0 1rem;
-  align-items: center;
-  background-color: #0000000;
-  height: 62px;
-  border-bottom: 1px solid #1f1f1f;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 1rem 0 1rem;
+	align-items: center;
+	background-color: #000000;
+	height: 62px;
+	border-bottom: 1px solid #1f1f1f;
 }
 
 .folders {
+	list-style: none;
+	padding: 0;
 }
 
 .folder {
-  border-bottom: 1px solid #1f1f1f;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+	cursor: pointer;
+	border-bottom: 1px solid #1f1f1f;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+@media (pointer: fine) {
+	.folder:hover {
+		filter: brightness(110%);
+	}
 }
 
 .icn {
-  margin: 0 0.75rem 0 1rem;
-  width: 50px;
+	margin: 0 0.75rem 0 1rem;
+	width: 50px;
 }
 
 .blue {
-  color: #0b7ef1;
+	color: #0b7ef1;
 }
 
 .bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100vw;
-  background-color: #090a09;
-  height: 45px;
-  border-bottom: 1px solid #1f1f1f;
-  position: fixed;
-  bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100vw;
+	background-color: #090a09;
+	height: 45px;
+	border-bottom: 1px solid #1f1f1f;
+	position: fixed;
+	bottom: 0;
 }
 
 .bottom > img {
-  width: 45px;
+	width: 45px;
 }
 
 .diskInfo {
-  position: absolute;
-  right: 0;
+	position: absolute;
+	right: 0;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 225px;
-  margin-right: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 225px;
+	margin-right: 1rem;
 }
 
 .diskInfo > span {
-  color: #484848;
-  text-decoration: underline;
-  font-size: 13px;
+	color: #484848;
+	text-decoration: underline;
+	font-size: 13px;
 }
 
 .info {
-  position: absolute;
-  right: 0;
+	position: absolute;
+	right: 0;
 
-  width: 90px;
-  margin-right: 0.4rem;
+	width: 90px;
+	margin-right: 0.4rem;
 }
 
 .arrow {
-  height: 25px;
-}
-
-.var {
-  transform: translate(-75px, 4px);
-}
-
-.topText1 {
-  transform: translate(-48px, 4px);
-}
-
-.topText2 {
-  transform: translate(0, 4px);
-}
-
-.a1 {
-  transform: translatey(4px);
+	height: 25px;
 }
 
 .search {
-  width: 35px;
-  height: 35px;
+	width: 35px;
+	height: 35px;
 }
 
 .arrows {
-  width: 15px;
-  transform: translatey(9.8px);
-  margin-right: 2.5px;
+	width: 15px;
+	margin-right: 2.5px;
 }
 
 .search1 > span {
-  transform: translatey(-8px);
+	display: flex;
+	align-items: center;
 }
 
 .thing {
-  width: 70px;
-  transform: translatex(10px);
+	width: 70px;
 }
 
 #aboutMe {
-  display: none;
+	display: none;
+	padding: 1rem;
 }
 #socials {
-  display: none;
+	display: none;
+	padding: 1rem;
 }
 #myPage {
-  display: none;
+	display: none;
 }
 #projects {
-  display: none;
-}
-
-#aboutMe {
-  padding: 1rem;
-}
-#socials {
-  padding: 1rem;
-}
-#projects {
-  padding: 1rem;
+	display: none;
+	padding: 1rem;
 }
 
 a {
-  color: #0b7ef1;
+	color: #0b7ef1;
 }
