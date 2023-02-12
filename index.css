@@ -5,6 +5,7 @@ body {
   background-color: #000000;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
 }
 
 .top {
@@ -26,8 +27,6 @@ body {
   height: 62px;
   border-bottom: 1px solid #1f1f1f;
 }
-
-
 
 .folders {
 }
@@ -52,16 +51,18 @@ body {
 .bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 90vw;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
   background-color: #090a09;
   height: 45px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   border-bottom: 1px solid #1f1f1f;
-
   position: fixed;
   bottom: 0;
+}
+
+.bottom > img {
+  width: 45px;
 }
 
 .diskInfo {
@@ -72,7 +73,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 225px;
-  margin-right: 1rem
+  margin-right: 1rem;
 }
 
 .diskInfo > span {
@@ -86,70 +87,72 @@ body {
   right: 0;
 
   width: 90px;
-  margin-right: .4rem;
+  margin-right: 0.4rem;
 }
 
 .arrow {
-    height: 25px;
+  height: 25px;
 }
 
 .var {
-    transform: translate(-75px, 4px)
+  transform: translate(-75px, 4px);
 }
 
 .topText1 {
-    transform: translate(-48px, 4px);
-
+  transform: translate(-48px, 4px);
 }
 
 .topText2 {
-    transform: translate(0, 4px);
+  transform: translate(0, 4px);
 }
 
 .a1 {
-    transform: translatey(4px)
+  transform: translatey(4px);
 }
 
 .search {
-    width: 35px;
-    height: 35px
+  width: 35px;
+  height: 35px;
 }
 
 .arrows {
-    width: 15px;
-    transform: translatey(9.8px);
-    margin-right: 2.5px
+  width: 15px;
+  transform: translatey(9.8px);
+  margin-right: 2.5px;
 }
 
 .search1 > span {
-    transform: translatey(-8px)
+  transform: translatey(-8px);
 }
 
 .thing {
-    width: 70px;
-    transform: translatex(10px);
+  width: 70px;
+  transform: translatex(10px);
 }
 
 #aboutMe {
-    display:none;
+  display: none;
 }
 #socials {
-    display: none;
+  display: none;
 }
-#myPage{
-    display: none;
-}#projects{
-    display:none;
+#myPage {
+  display: none;
+}
+#projects {
+  display: none;
 }
 
-#aboutMe{
-    padding: 1rem;
-} #socials{
-    padding: 1rem
-} #projects {
-    padding: 1rem;
+#aboutMe {
+  padding: 1rem;
+}
+#socials {
+  padding: 1rem;
+}
+#projects {
+  padding: 1rem;
 }
 
 a {
-    color: #0b7ef1
+  color: #0b7ef1;
 }
