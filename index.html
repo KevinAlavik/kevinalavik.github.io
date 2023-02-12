@@ -1,152 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>/var/mobile/puffer</title>
-		<link rel="stylesheet" href="index.css" />
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<script src="script.js"></script>
-		<div class="top">
-			<div>
-				<img
-					class="arrow"
-					src="./assets/leftArrow.png"
-					alt="Left arrow"
-				/>
-				<span class="blue var" id="path">var</span>
-			</div>
-			<span class="dir-name">mobile</span>
-			<div>
-				<span class="blue topText2">Edit</span>
-			</div>
-		</div>
-		<div class="search1">
-			<img src="./assets/search.png" class="search" alt="" />
-			<span
-				><img
-					class="arrows"
-					src="./assets/arrows.png"
-					alt=""
-				/>Name</span
-			>
-			<span
-				><img
-					class="arrows"
-					src="./assets/arrows.png"
-					alt=""
-				/>Date</span
-			>
-			<span
-				><img
-					class="arrows"
-					src="./assets/arrows.png"
-					alt=""
-				/>Size</span
-			>
-			<img src="./assets/weirdThing.png" class="thing" alt="" />
-		</div>
-		<ul class="folders" id="mainPage">
-			<li class="folder" onclick="myPageLoad()">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>puffer</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Downloads</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Documents</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Library</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Containers</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>MobileSoftwareUpdate</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Media</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-			<li class="folder" style="border: none">
-				<img class="icn" src="./assets/folder.png" alt="Folder" />
-				<span>Applications</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</li>
-		</ul>
-		<!-- MY PAGE -->
-		<div class="folders" id="myPage">
-			<div
-				class="folder"
-				style="border: none; margin-bottom: 10px"
-				onclick="aboutMeLoad()"
-			>
-				<img class="icn" src="./assets/txt.png" alt="Txt" />
-				<span>aboutMe.txt</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</div>
-			<div
-				class="folder"
-				style="border: none; margin-bottom: 10px"
-				onclick="socialsLoad()"
-			>
-				<img class="icn" src="./assets/txt.png" alt="Txt" />
-				<span>socials.txt</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</div>
-			<div
-				class="folder"
-				style="border: none; margin-bottom: 10px"
-				onclick="projectsLoad()"
-			>
-				<img class="icn" src="./assets/txt.png" alt="Txt" />
-				<span>projects.txt</span>
-				<img src="./assets/info.png" alt="" class="info" />
-			</div>
-		</div>
-		<div class="folders" id="aboutMe">
-			<span style="me"
-				>My name is Kevin; aka puffer. I'm a young developer based in
-				Sweden.</span
-			>
-		</div>
-		<div class="folders" id="socials">
-			<a href="https://github.com/KevinAlavik">Github</a>
-			<a href="https://twitter.com/pufferisadev">Twitter</a>
-			<a href="https://t.me/itspuffer">Telegram</a>
-			<span>Discord: puffer#5823</span>
-		</div>
-		<div class="folders" id="projects">
-			<span>My current projects:</span>
-		</div>
-		<div class="diskInfo">
-			<span>/dev/disk1s2</span>
-			<span>3,69 GB</span>
-			<span>/dev/disk1s2</span>
-		</div>
-		<div class="bottom">
-			<img src="./assets/clipboard.png" alt="clipboard" />
-			<img src="./assets/clock.png" alt="clock" />
-			<img src="./assets/star.png" alt="star" />
-			<img src="./assets/setting.png" alt="settings" />
-			<img src="./assets/2screen.png" alt="two screens" />
-		</div>
-	</body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>/var/mobile/puffer</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="top">
+        <div>
+            <img class="arrow" src="./assets/leftArrow.png" alt="Left arrow" />
+            <span class="blue var" id="path">var</span>
+        </div>
+        <span class="dir-name">mobile</span>
+        <div>
+            <span class="blue topText2">Edit</span>
+        </div>
+    </div>
+    <div class="search1">
+        <img src="./assets/search.png" class="search" alt="" />
+        <span><img class="arrows" src="./assets/arrows.png" alt="" />Name</span>
+        <span><img class="arrows" src="./assets/arrows.png" alt="" />Date</span>
+        <span><img class="arrows" src="./assets/arrows.png" alt="" />Size</span>
+        <img src="./assets/weirdThing.png" class="thing" alt="" />
+    </div>
+    <div class="folders" id="mainPage">
+        <li class="folder" onclick="myPageLoad()">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>puffer</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </li>
+        <li class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Downloads</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </li>
+        <li class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Documents</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </li>
+        <li class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Library</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </li>
+        <div class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Containers</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+        <div class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>MobileSoftwareUpdate</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+        <div class="folder">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Media</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+        <div class="folder" style="border: none">
+            <img class="icn" src="./assets/folder.png" alt="Folder" />
+            <span>Appdivcations</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+    </div>
+    <!-- MY PAGE -->
+    <div class="folders" id="myPage">
+        <div class="folder" style="border: none; margin-bottom: 10px" onclick="aboutMeLoad()">
+            <img class="icn" src="./assets/txt.png" alt="Txt" />
+            <span>aboutMe.txt</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+        <div class="folder" style="border: none; margin-bottom: 10px" onclick="socialsLoad()">
+            <img class="icn" src="./assets/txt.png" alt="Txt" />
+            <span>socials.txt</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+        <div class="folder" style="border: none; margin-bottom: 10px" onclick="projectsLoad()">
+            <img class="icn" src="./assets/txt.png" alt="Txt" />
+            <span>projects.txt</span>
+            <img src="./assets/info.png" alt="" class="info" />
+        </div>
+    </div>
+    <div class="folders" id="aboutMe">
+        <span style="me">My name is Kevin; aka puffer. I'm a young developer based in
+            Sweden.</span>
+    </div>
+    <div class="folders" id="socials">
+        <a href="https://github.com/KevinAlavik">Github</a>
+        <a href="https://twitter.com/pufferisadev">Twitter</a>
+        <a href="https://t.me/itspuffer">Telegram</a>
+        <span>Discord: puffer#5823</span>
+    </div>
+    <div class="folders" id="projects">
+        <span>My current projects:</span>
+    </div>
+    <div class="diskInfo">
+        <span>/dev/disk1s2</span>
+        <span>3,69 GB</span>
+        <span>/dev/disk1s2</span>
+    </div>
+    <div class="bottom">
+        <img src="./assets/clipboard.png" alt="clipboard" />
+        <img src="./assets/clock.png" alt="clock" />
+        <img src="./assets/star.png" alt="star" />
+        <img src="./assets/setting.png" alt="settings" />
+        <img src="./assets/2screen.png" alt="two screens" />
+    </div>
+</body>
+
 </html>
