@@ -26,6 +26,8 @@ function myPageLoad () {
     showPage('myPage')
     document.getElementById('path').innerHTML = 'mobile'
     document.getElementById('path').setAttribute('onclick', 'mainPageLoad()')
+    document.getElementById('items').innerHTML = '3 item(s)'
+    document.getElementById('diskInfo').style.opacity = 1
   }
 }
 
@@ -40,7 +42,7 @@ function aboutMeLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('socials').style.display = 'none'
     document.getElementById('projects').style.display = 'none'
-
+    document.getElementById('diskInfo').style.opacity = 0
     showPage('aboutMe')
     document.getElementById('path').innerHTML = 'puffer'
     document.getElementById('path').setAttribute('onclick', 'myPageLoad()')
@@ -57,7 +59,7 @@ function socialsLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('aboutMe').style.display = 'none'
     document.getElementById('projects').style.display = 'none'
-
+    document.getElementById('diskInfo').style.opacity = 0
     showPage('socials')
     document.getElementById('path').innerHTML = 'puffer'
     document.getElementById('path').setAttribute('onclick', 'myPageLoad()')
@@ -75,7 +77,7 @@ function projectsLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('aboutMe').style.display = 'none'
     document.getElementById('socials').style.display = 'none'
-
+    document.getElementById('diskInfo').style.opacity = 0
     showPage('projects')
     document.getElementById('path').innerHTML = 'puffer'
     document.getElementById('path').setAttribute('onclick', 'myPageLoad()')
@@ -91,5 +93,7 @@ function mainPageLoad () {
     myPageOpen = false
     showPage('mainPage')
     document.getElementById('path').innerHTML = 'var'
+    document.getElementById('diskInfo').style.opacity = 1
+    document.getElementById('items').innerHTML = '8 item(s)'
   }
 }
