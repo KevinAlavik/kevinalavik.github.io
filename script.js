@@ -23,6 +23,7 @@ function myPageLoad () {
     document.getElementById('aboutMe').style.display = 'none'
     document.getElementById('socials').style.display = 'none'
     document.getElementById('projects').style.display = 'none'
+    document.getElementById('dirName').innerHTML = 'puffer'
     showPage('myPage')
     document.getElementById('path').innerHTML = 'mobile'
     document.getElementById('path').setAttribute('onclick', 'mainPageLoad()')
@@ -42,6 +43,7 @@ function aboutMeLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('socials').style.display = 'none'
     document.getElementById('projects').style.display = 'none'
+    document.getElementById('dirName').innerHTML = 'aboutMe.txt'
     document.getElementById('diskInfo').style.opacity = 0
     showPage('aboutMe')
     document.getElementById('path').innerHTML = 'puffer'
@@ -59,6 +61,7 @@ function socialsLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('aboutMe').style.display = 'none'
     document.getElementById('projects').style.display = 'none'
+    document.getElementById('dirName').innerHTML = 'socials.txt'
     document.getElementById('diskInfo').style.opacity = 0
     showPage('socials')
     document.getElementById('path').innerHTML = 'puffer'
@@ -77,6 +80,7 @@ function projectsLoad () {
     document.getElementById('myPage').style.display = 'none'
     document.getElementById('aboutMe').style.display = 'none'
     document.getElementById('socials').style.display = 'none'
+    document.getElementById('dirName').innerHTML = 'projects.txt'
     document.getElementById('diskInfo').style.opacity = 0
     showPage('projects')
     document.getElementById('path').innerHTML = 'puffer'
@@ -95,6 +99,7 @@ function mainPageLoad () {
     document.getElementById('path').innerHTML = 'var'
     document.getElementById('diskInfo').style.opacity = 1
     document.getElementById('items').innerHTML = '8 item(s)'
+    document.getElementById('dirName').innerHTML = 'mobile'
   }
 }
 
