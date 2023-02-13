@@ -97,3 +97,14 @@ function mainPageLoad () {
     document.getElementById('items').innerHTML = '8 item(s)'
   }
 }
+
+document.onkeypress = zx;
+function zx(e) {
+  if (e.keyCode === 112) {
+    bug()
+  }
+}
+
+function bug() {
+        window.open('https://www.youtube.com/watch?v=M5V_IXMewl4')
+}
