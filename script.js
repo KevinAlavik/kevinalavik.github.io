@@ -108,3 +108,5 @@ function zx(e) {
 function bug() {
         window.open('https://www.youtube.com/watch?v=M5V_IXMewl4')
 }
+
+// hehhehehehehehhhehehhe get bugged
