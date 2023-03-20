@@ -1,0 +1,23 @@
+body {
+  margin: 2.5rem;
+  color: white;
+  background-color: #222222;
+  font-family: sans-serif;
+}
+
+a {
+  color: #FF2D55;
+  text-decoration: none;
+}
+.folders {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.name {
+  transform: translateY(-100px);
+}
