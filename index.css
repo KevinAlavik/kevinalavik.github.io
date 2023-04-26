@@ -68,3 +68,8 @@ h1 {
     }
   }
 
+
+.title {
+    margin-bottom: 1rem;
+    font-family: 'MODERN TYPEWRITER', sans-serif;
+}
