@@ -73,3 +73,8 @@ h1 {
     margin-bottom: 1rem;
     font-family: 'MODERN TYPEWRITER', sans-serif;
 }
+
+.appIcon {
+    border-radius: 20px;
+    width: 100px
+}
