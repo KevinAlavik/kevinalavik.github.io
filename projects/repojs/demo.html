@@ -41,18 +41,30 @@
     <br>
     <br>
     <h5>Demo output:</h5>
-    <div id="out">
-  
+    <div id="outDiv">
+      <strong>Repo Name: </strong><span id="repoName"></span>
+      <br>
+      <strong>Repo Icon Url: </strong><span id="repoIconUrl"></span>
+      <br>
+      <strong>Repo Icon: </strong><img id="repoIcon">
     </div>
+    <br>
+    <p>Parse paramenters passed: data. The data variable comes from the <code>repojs.repo.fetch(url)</code> function</p>    
+    <p>The repo passed in is <code>https://puffer.is-a.dev/repos/main-scarlet.json</code> aka my repo full of my apps! (<a href="https://puffer.is-a.dev/repo.html">get it here</a>!)</p>
   </div>
   <script>
-    output = document.getElementById('out')
-    output.innerText = "Loading..."
+    repoName = document.getElementById('repoName')
+    repoIconUrl = document.getElementById('repoIconUrl')
+    repoName.innerText = "Loading..."
+    repoIconUrl.innerText = "Loading..."
     repojs.init();
     repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")
       .then(data => {
-        data = repojs.repo.parse(data);
-        repojs.repo.document.append(data, output);
+        data = repojs.repo.parse(data, "META.repoName");
+        repojs.repo.document.append(data, repoName);
+        data = repojs.repo.parse(data, "META.repoIcon");
+        repojs.repo.document.append(data, repoIconUrl);
+        repoIcon = document.getElementById('repoIcon').attributes.href = data
       });
   </script>
 </body>
