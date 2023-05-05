@@ -37,16 +37,21 @@
     <code>
       ‎ });
     </code>
-  </div>
-  <div id="out">
-
+    <br>
+    <br>
+    <br>
+    <h5>RepoJS Output (Repo: <code>https://puffer.is-a.dev/repos/main-scarlet.json</code>)</h5>
+    <strong>repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")</strong>
+    <div id="out">
+  
+    </div>
   </div>
   <script>
 
     repojs.init();
     repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")
       .then(data => {
-        data = repojs.repo.parse(data, "META");
+        data = repojs.repo.parse(data);
         output = document.getElementById('out')
         repojs.repo.document.append(data, output);
       });

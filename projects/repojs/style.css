@@ -19,3 +19,7 @@ code {
   flex-direction: column;
   justify-content: center;
 }
+
+.out {
+  margin: 1
+}
