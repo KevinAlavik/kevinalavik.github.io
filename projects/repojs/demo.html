@@ -40,14 +40,12 @@
     <br>
     <br>
     <br>
-    <h5>RepoJS Output (Repo: <code>https://puffer.is-a.dev/repos/main-scarlet.json</code>)</h5>
-    <strong>repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")</strong>
+    <h5>Demo output:</h5>
     <div id="out">
   
     </div>
   </div>
   <script>
-
     repojs.init();
     repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")
       .then(data => {
@@ -55,7 +53,6 @@
         output = document.getElementById('out')
         repojs.repo.document.append(data, output);
       });
-
   </script>
 </body>
 
