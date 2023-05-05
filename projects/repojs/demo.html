@@ -17,7 +17,7 @@
   <div class="main">
     <h1>Demo Site For repojs</h1>
     <p>You can init repojs by running the <code>repojs.init()</code> function.</p>
-    <p>You can fetch and parse + add the data to the document like this:</p>
+    <p>You can fetch and parse + add the data to the document like this (this gets all the data from the repo and parses it!):</p>
     <code>
       repojs.repo.fetch("https://puffer.is-a.dev/repos/main-scarlet.json")
     </code>
@@ -27,7 +27,7 @@
     </code>
     <br>
     <code>
-      ‎ ‎ data = repojs.repo.parse(data, "META");
+      ‎ ‎ data = repojs.repo.parse(data);
     </code>
     <br>
     <code>
