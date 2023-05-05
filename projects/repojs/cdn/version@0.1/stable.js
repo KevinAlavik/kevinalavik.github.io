@@ -1,4 +1,4 @@
-fetch('https://raw.githubusercontent.com/KevinAlavik/repojs/main/src/stable/index.js')
+fetch('https://cdn.jsdelivr.net/gh/KevinAlavik/repojs/src/stable/index.js')
   .then(response => response.text())
   .then(data => {
     const script = document.createElement('script');
