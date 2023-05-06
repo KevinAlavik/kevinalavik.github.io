@@ -147,7 +147,7 @@ body {
   height: 200px;
   border-radius: inherit;
   object-fit: cover;
-  transform: translateY(-200);
+  transform: translateY(-400);
 }
 
 
