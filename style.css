@@ -125,7 +125,7 @@ body {
 
 .pfp-container {
   position: relative;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   border-radius: 100%;
 }
@@ -147,7 +147,6 @@ body {
   height: 200px;
   border-radius: inherit;
   object-fit: cover;
-  transform: translateY(-400);
 }
 
 
