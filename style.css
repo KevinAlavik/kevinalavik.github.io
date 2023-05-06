@@ -127,7 +127,7 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .overlay {
