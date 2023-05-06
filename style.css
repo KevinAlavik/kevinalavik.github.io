@@ -37,6 +37,7 @@ body {
   height: 45em;
   width: 75%;
   max-width: 425px;
+  animation: animateBorder 3s infinite;
 }
 
 .main > * {
