@@ -1,0 +1,148 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: white;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid black;
+  padding: 2rem;
+  border-radius: 20px
+}
+
+.main > * {
+  margin-bottom: -1rem;
+}
+
+.socials {
+  padding: 1rem;
+}
+
+.socials > * {
+  margin: 0.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  width: 200px;
+  background-color: white;
+}
+
+.handle {
+  margin-bottom: .5rem;
+}
+
+.about {
+  margin-top: .5rem;
+}
+
+.card > .first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: -1rem;
+}
+
+.card > .text {
+  font-size: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.github {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.twitter {
+  border: 2px solid #1da1f2;
+}
+
+.twitterIcon {
+  color: #1da1f2;
+}
+
+.discord {
+  border: 2px solid #5865f2;
+}
+
+.discordIcon {
+  color: #5865f2;
+}
+
+.pfp-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  animation: animateBorder 3s infinite;
+  box-shadow: inset 0 0 0 10px;
+}
+
+.pfp {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+@keyframes animateBorder {
+  0% {
+    box-shadow: inset 0 0 0 10px #ff6699;
+  }
+  50% {
+    box-shadow: inset 0 0 0 10px #6699ff;
+  }
+  100% {
+    box-shadow: inset 0 0 0 10px #ff6699;
+  }
+}
+
+@keyframes animateText {
+  0% {
+    color: #ff6699;
+  }
+  50% {
+    color: #6699ff;
+  }
+  100% {
+    color: #ff6699;
+  }
+}
+
+.animate {
+  animation: animateText 3s infinite;
+}
+
+a {
+  color: black;
+  text-decoration: none
+}
