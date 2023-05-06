@@ -99,6 +99,14 @@ body {
   color: #1da1f2;
 }
 
+.mastodon {
+  border: 2px solid #6364FF
+}
+
+.mastodonIcon {
+  color: #6364FF
+}
+
 .youtube {
  	border: 2px solid red; 
 }
