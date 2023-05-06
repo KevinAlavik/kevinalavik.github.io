@@ -37,7 +37,7 @@ body {
   height: 45em;
   width: 75%;
   max-width: 425px;
-  animation: animateBorder 3s infinite;
+  animation: animateBorder2 3s infinite;
 }
 
 .main > * {
@@ -145,6 +145,20 @@ body {
   }
 }
 
+
+@keyframes animateBorder2 {
+  0% {
+    border-color: #ff6699;
+  }
+  50% {
+    border-color: #6699ff;
+  }
+  100% {
+    border-color: #ff6699;
+  }
+}
+ 
+ 
 @keyframes animateText {
   0% {
     color: #ff6699;
