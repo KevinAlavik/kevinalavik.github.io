@@ -128,14 +128,16 @@ body {
   display: block;
   overflow: hidden;
   border-radius: 100%;
+  width: 400px;
+  height: 400px
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: inherit;
   animation: animateBorder 3s infinite;
   box-shadow: inset 0 0 0 10px;
@@ -143,8 +145,8 @@ body {
 
 .pfp {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: inherit;
   object-fit: cover;
 }
