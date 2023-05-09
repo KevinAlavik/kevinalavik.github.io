@@ -127,9 +127,9 @@ body {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 100%;
-  width: 400px;
-  height: 400px
+  border-radius: 50%;
+  width: 200px;
+  height: 200px
 }
 
 .overlay {
@@ -150,6 +150,7 @@ body {
   border-radius: inherit;
   object-fit: cover;
 }
+
 
 
 
