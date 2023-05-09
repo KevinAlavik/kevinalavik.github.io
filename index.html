@@ -1,126 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>puffer</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-
-<body>
-  <div class="top">
-    <div class="left">
-      <p class="topName">puffer</p>
-    </div>
-    <div class="right">
-      <a href="#about">about me</a>
-      <a href="#projects">projects</a>
-      <a href="#other">other</a>
-      <a href="blog.html">blog</a>
-    </div>
-  </div>
-  <div class="main">
-    <br>
-    <h3>News!</h3>
-    <p>Added a <a href="blog.html">blog/article</a> thingy!</p>
-    <p>Added some <a href="repo.html">repos</a>! Full of my apps and other apps</p>
-    <br>
-    <div class="article">
-      <h1>Hello, im puffer!</h1>
-      <ul>
-        <li>Full Stack Developer</li>
-        <li>From Sweden</li>
-        <li>13 years old</li>
-      </ul>
-    </div>
-    <div class="article">
-      <h1>Recommended Apps</h1>
-      <p>Here are some of my recommended apps (and what they do)</p>
-      <br>
-      <div class="app">
-        <h2>Scarlet</h2>
-        <br>
-        <i>Icon:</i>
-        <br>
-        <img src="https://usescarlet.com/favicon.png" class="appIcon" alt="Scarlet Icon">
-        <br>
-        <br>
-        <p>Scarlet is an app to sign apps for iOS devices</p>
-        <br>
-        <h3>Supported iOS Versions</h3>
-        <br>
-        <ul>
-          <li>iOS 13 and up</li>
-        </ul>
-        <br>
-        <h3>Download && Link</h3>
-        <br>
-        <a href="https://twitter.com/usescarlet">Twitter</a>
-        x
-        <a href="https://usescarlet.com">Website</a>
-        x
-        <a href="https://resources.usescarlet.com/install.php">Install</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>puffer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a5ae6c00ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="pfp-container">
+        <div class="overlay"></div>
+        <img src="https://pbs.twimg.com/profile_images/1653996834161819648/GL7Hoa4p_400x400.jpg" alt="" class="pfp" />
       </div>
-    <br>
-    <br>
-    <br>
-    <div class="article">
-      <h1>Links</h1>
-      <ul>
-        <li><a href="https://twitter.com/pufferisadev">Twitter</a></li>
-        <li><a href="https://github.com/kevinalavik">Github</a></li>
-      </ul>
+      
+      <h1 class="name">Kevin Alavik</h1>
+      <h4 class="handle animate">@pufferisadev</h4>
+      <p class="about">
+        Hey im puffer and im a 13 year old developer from sweden.
+        <p>
+          More info <a href="https://puffer.is-a.dev/old.html" style="text-decoration: underline;">here</a>
+        </p>
+      </p>
+      <div class="socials">
+        <p align="center" style="margin-bottom: 1rem">(tips: click the cards)</p>
+          <div class="card github" onclick="window.open('https://github.com/kevinalavik', '_parent')">
+            <div class="first">
+              <i class="fa-brands fa-github icon"></i>
+              <p>Github</p>
+            </div>
+            <div class="text">
+              <p>
+                Go to my github profile to get the source code of my projects
+              </p>
+            </div>
+          </div>
+        </a>
+        <div class="card twitter" onclick="window.open('https://twitter.com/pufferisadev', '_parent')">
+          <div class="first">
+            <i class="fa-brands fa-twitter icon twitterIcon"></i>
+            <p>Twitter</p>
+          </div>
+          <div class="text">
+            <p>Follow my twitter for daily shitposting</p>
+          </div>
+        </div>
+        <div class="card discord" onclick="window.open('https://discord.gg/Ateu2PUYqF', '_parent')">
+          <div class="first">
+            <i class="fa-brands fa-discord icon discordIcon"></i>
+            <p>Discord</p>
+          </div>
+          <div class="text">
+            <p>Join my discord server to get notifications on new releases</p>
+          </div>
+        </div>
+        <div class="card youtube" onclick="window.open('https://youtube.com/@pufferisadev', '_parent')">
+          <div class="first">
+            <i class="fa-brands fa-youtube icon youtubeIcon"></i>
+            <p>Youtube</p>
+          </div>
+          <div class="text">
+            <p>Feel free to subscribe! Video up soon</p>
+          </div>
+        </div>
+        <div class="card mastodon" onclick="window.open('https://mstdn.social/@puffer', '_parent')">
+          <div class="first">
+            <i class="fa-brands fa-mastodon icon mastodonIcon"></i>
+            <p>Mastodon</p>
+          </div>
+          <div class="text">
+            <p>Sometimes i decide to post semi serious things</p>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
-    <div class="article" id="about">
-      <h1>About Me</h1>
-      <p>Im a 13 year old from Sweden interested in programming and low level computer things. I got into programming in the end of 2019 (beginning of COVID-19) and i started with HTML (no CSS or JavaScript) and my sites looked like they were made in the beginning of WWW. Then i learnt JavaScript and Python and it went grate i made a few projects, mostly stuff like a fake log in system for the terminal 🤣. Then i moved on by learning CSS and i got pretty good at it. And like a year ago i started learning a bunch of languages at one time and right now everything went well and im mostly into low level programming and reverse engineering.<br><br><strong>My favorite languages right now: </strong> C, Swift, ASM, C++, Bash. Maybe even some JavaScript and NodeJs :)</p>
-    </div>
-    <div class="article">
-      <h1>My atm interests</h1>
-      <p>Right now im into reverse engineering and iOS jailbreaking and reverse engineering. Ethical hacking is also one of my biggest interests.</p>
-    </div>
-    <div id="projects" class="article">
-      <h1>Projects</h1>
-      <ul>
-        <li class="project">
-          Scylla
-          <ul>
-            <li><a href="https://github.com/kevinalavik/scylla-ios">Github</a></li>
-            <li><a href="htts://getscylla.app">Website</a></li>
-          </ul>
-  
-        </li>
-        <l
-        i class="project">
-          Chrome Pie
-          <ul>
-            <li><a href="https://github.com/kevinalavik/chrome-pie">Github</a></li>
-            <li><a href="" onclick="alert('No website for Chrome Pie, yet')">Website</a></li>
-          </ul>
-        </l>
-        <li class="project">
-          RepoJS
-          <ul>
-            <li><a href="https://github.com/kevinalavik/repojs">Github</a></li>
-            <li><a href="" onclick="alert('No website for Repo Js, yet')">Website</a></li>
-          </ul>
-        </li>
-        <li class="project">
-          Apollo Lang
-          <ul>
-            <li><a href="https://github.com/apollolang/">Github</a></li>
-            <li><a href="https://apollolang.github.io">Website</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div id="other" class="article">
-      <h1>Other</h1>
-      <p>More info coming soon...</p>
-    </div>
-  </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
+  </body>
 </html>
