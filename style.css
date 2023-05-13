@@ -34,7 +34,7 @@ body {
   padding: 2rem;
   border-radius: 20px;
   margin: 0;
-  height: 45em;
+  height: 50em;
   width: 75%;
   max-width: 425px;
   animation: animateBorder2 3s infinite;
@@ -207,4 +207,8 @@ a {
 
 .text > * {
   text-align: left;
+}
+
+.other {
+  margin: 2rem;
 }
