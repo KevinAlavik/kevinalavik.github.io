@@ -59,6 +59,10 @@ body {
   flex-direction: row;
 }
 
+.flex-dir-column {
+  flex-direction: column;
+}
+
 .card {
   border: 1px solid var(--lavender);
   padding: 8px 16px;
@@ -114,7 +118,7 @@ a {
   background-color: var(--lavender);
   color: var(--crust);
   width: 300px;
-  height: 200px;
+  height: 240px;
 }
 
 
@@ -170,4 +174,21 @@ a {
 
 .blogContinue {
   color: var(--overlay0)
+}
+
+.code {
+  background-color: var(--surface1);
+  color: var(--text);
+  border-radius: 12pt;
+  padding: 8px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 10px;
+  line-height: 0.1;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  text-align: start;
+}
+
+.code > p {
+  margin-left: 10px;
 }
