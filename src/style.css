@@ -1,126 +1,173 @@
 :root {
-    --rosewater: #f4dbd6;
-    --flamingo: #f0c6c6;
-    --pink: #f5bde6;
-    --mauve: #c6a0f6;
-    --red: #ed8796;
-    --maroon: #ee99a0;
-    --peach: #f5a97f;
-    --yellow: #eed49f;
-    --green: #a6da95;
-    --teal: #8bd5ca;
-    --sky: #91d7e3;
-    --sapphire: #7dc4e4;
-    --blue: #8aadf4;
-    --lavender: #b7bdf8;
-    --text: #cad3f5;
-    --subtext1: #b8c0e0;
-    --subtext0: #a5adcb;
-    --overlay2: #939ab7;
-    --overlay1: #8087a2;
-    --overlay0: #6e738d;
-    --surface2: #5b6078;
-    --surface1: #494d64;
-    --surface0: #363a4f;
-    --base: #24273a;
-    --mantle: #1e2030;
-    --crust: #181926;
-  }
-  
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--base);
-    color: var(--text);
-    margin: 2rem;
-  }
-  
+  --rosewater: #f4dbd6;
+  --flamingo: #f0c6c6;
+  --pink: #f5bde6;
+  --mauve: #c6a0f6;
+  --red: #ed8796;
+  --maroon: #ee99a0;
+  --peach: #f5a97f;
+  --yellow: #eed49f;
+  --green: #a6da95;
+  --teal: #8bd5ca;
+  --sky: #91d7e3;
+  --sapphire: #7dc4e4;
+  --blue: #8aadf4;
+  --lavender: #b7bdf8;
+  --text: #cad3f5;
+  --subtext1: #b8c0e0;
+  --subtext0: #a5adcb;
+  --overlay2: #939ab7;
+  --overlay1: #8087a2;
+  --overlay0: #6e738d;
+  --surface2: #5b6078;
+  --surface1: #494d64;
+  --surface0: #363a4f;
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--base);
+  color: var(--text);
+  margin: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.main>* {
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.top {
+  margin-bottom: 1.5rem;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 1px solid var(--lavender);
+  padding: 8px 16px;
+  border-radius: 12pt;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lavender);
+  /* Optional: Adding a background color to match the border color */
+  color: var(--crust);
+  font-size: 14px;
+}
+
+.card>i {
+  margin-right: 8px;
+}
+
+.card {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.card>a {
+  color: var(--crust);
+}
+
+a {
+  color: var(--mauve)
+}
+
+.bottom {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-calc(100% - 100vh));
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  border: 1px solid var(--lavender);
+  padding: 16px;
+  border-radius: 12pt;
+  margin-bottom: 1rem;
+  background-color: var(--lavender);
+  color: var(--crust);
+  width: 300px;
+  height: 200px;
+}
+
+
+
+.post>.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.post>.top>.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post>.top>.badge {
+  margin-left: 8px;
+  color: var(--crust);
+}
+
+.post>.body>p {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
   .main {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
   }
-  
-  .main>* {
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .top {
-    margin-bottom: 1.5rem;
-  }
-  
-  .socials {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .projects {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .card {
-    border: 1px solid var(--lavender);
-    padding: 8px 16px;
-    border-radius: 12pt;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--lavender);
-    /* Optional: Adding a background color to match the border color */
-    color: var(--crust);
-    font-size: 14px;
-  }
-  
-  .card>i {
-    margin-right: 8px;
-  }
-  
-  .card {
-    margin-right: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .card>a {
-    color: var(--crust);
-  }
-  
-  a {
-    color: var(--mauve)
-  }
-  
+
   .bottom {
-    position: fixed;
-    left: 20px;
-    right: 20px;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transform: translateY(-calc(100% - 100vh));
+    flex-direction: column;
+    align-items: flex-start;
+    transform: none;
   }
-  
-  /* Responsive adjustments */
-  
-  @media (max-width: 768px) {
-    .main {
-      flex-direction: column;
-    }
-    
-    .bottom {
-      flex-direction: column;
-      align-items: flex-start;
-      transform: none;
-    }
-    
-    .bottom>* {
-      margin-bottom: 0.5rem;
-    }
-    
-    .bottom>*:last-child {
-      margin-bottom: 0;
-      margin-bottom: 0.5rem;
-    }
+
+  .bottom>* {
+    margin-bottom: 0.5rem;
   }
-  
+
+  .bottom>*:last-child {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.cover {
+  width: 300px;
+  border-radius: 6pt;
+}
+
+.blogContinue {
+  color: var(--overlay0)
+}
