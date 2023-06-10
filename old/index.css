@@ -1,188 +1,80 @@
+@import url('https://fonts.cdnfonts.com/css/modern-typewriter');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: white;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	background-color: #000000;
-	color: white;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: rgb(15, 15, 15);
 }
 
 .top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 1rem;
-  /* padding: 0.5rem 1rem 0 1rem; */
-  background-color: #090a09;
-  height: 45px;
-  border-bottom: 1px solid #1f1f1f;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'MODERN TYPEWRITER', sans-serif;
+    background-color: black;
 }
 
-.top > div {
-  cursor: pointer;
+.top>.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100vw;
 }
 
-.top > div:first-of-type {
-  /* background-color: red; */
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.dir-name {
-  width: 100%;
-  text-align: center;
-}
-
-.search1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 1rem 0 1rem;
-  align-items: center;
-  background-color: #000000;
-  height: 62px;
-  border-bottom: 1px solid #1f1f1f;
-}
-
-.folders {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-.folder {
-  cursor: pointer;
-  border-bottom: 1px solid #1f1f1f;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-@media (pointer: fine) {
-  .folder:hover {
-    filter: brightness(110%);
-  }
-}
-
-.icn {
-  margin: 0 0.75rem 0 1rem;
-  width: 50px;
-}
-
-.blue {
-  color: #0b7ef1;
-}
-
-.bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100vw;
-  background-color: #090a09;
-  height: 45px;
-  border-bottom: 1px solid #1f1f1f;
-  position: fixed;
-  bottom: 0;
-}
-
-.bottom > img {
-  width: 45px;
-}
-
-.diskInfo {
-  position: absolute;
-  right: 0;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 225px;
-  margin-right: 1rem;
-}
-
-.diskInfo > span {
-  color: #484848;
-  text-decoration: underline;
-  font-size: 13px;
-}
-
-.info {
-  position: absolute;
-  right: 0;
-
-  width: 90px;
-  margin-right: 0.4rem;
-}
-
-.arrow {
-  height: 25px;
-}
-
-.search {
-  width: 35px;
-  height: 35px;
-}
-
-.arrows {
-  width: 15px;
-  margin-right: 2.5px;
-}
-
-.search1 > span {
-  display: flex;
-  align-items: center;
-}
-
-.thing {
-  width: 70px;
-}
-
-#aboutMe {
-  display: none;
-  padding: 1rem;
-}
-#socials {
-  display: none;
-  padding: 1rem;
-}
-#myPage {
-  display: none;
-}
-#projects {
-  display: none;
-  padding: 1rem;
-}
-
-#mainPage {
+.top>.right>a {
+    margin: 0 10px 0 10px;
 }
 
 a {
-  color: #0b7ef1;
+    text-decoration: underline;
+}
+
+.main {
+    padding: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+.article > h1 {
+    margin-bottom: 8px;
+}
+
+.main {
+    font-family: 'Courier New', Courier, monospace
+}
+
+.article {
+    margin-bottom: 2rem;
 }
 
 .project {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.project > span {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
+h1 {
+    font-size: 3.5vw;
 }
 
-#aboutMe > a {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-  transform: translatey(-10px)
+@media screen and (min-width: 1000px) {
+    h1 {
+       font-size: 35px;
+    }
+  }
+
+
+.title {
+    margin-bottom: 1rem;
+    font-family: 'MODERN TYPEWRITER', sans-serif;
 }
 
-#aboutMe > a > img {
-  transform: translatey(10px)
+.appIcon {
+    border-radius: 20px;
+    width: 100px
 }

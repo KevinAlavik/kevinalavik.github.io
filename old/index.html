@@ -2,155 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>/var/mobile/puffer</title>
-    <link rel="stylesheet" href="index.css" />
-    <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>puffer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a5ae6c00ff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <script src="script.js"></script>
-    <div class="top">
-        <div>
-            <img class="arrow" src="./assets/leftArrow.png" alt="Left arrow" />
-            <span class="blue var" id="path">var</span>
-        </div>
-        <span class="dir-name" onclick="bug()" id="dirName">mobile</span>
-        <div>
-            <span class="blue topText2">Edit</span>
-        </div>
-    </div>  
-    <div class="search1">
-        <img src="./assets/search.png" class="search" alt="" />
-        <span><img class="arrows" src="./assets/arrows.png" alt="" />Name</span>
-        <span><img class="arrows" src="./assets/arrows.png" alt="" />Date</span>
-        <span><img class="arrows" src="./assets/arrows.png" alt="" />Size</span>
-        <img src="./assets/weirdThing.png" class="thing" alt="" />
+  <div class="main">
+    <div class="pfp-container">
+      <div class="overlay"></div>
+      <img src="https://pbs.twimg.com/profile_images/1653996834161819648/GL7Hoa4p_400x400.jpg" alt="" class="pfp" />
     </div>
-    <div class="folders" id="mainPage">
-        <li class="folder" onclick="myPageLoad()">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>puffer</span>
-            <img src="./assets/info.png" alt="" class="info" />
-        </li>
-        <li class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Downloads</span>
-            <img src="./assets/info.png" alt="" class="info" />
-        </li>
-        <li class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Documents</span>
-            <img src="./assets/info.png" alt="" class="info" />
-        </li>
-        <li class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Library</span>
-            <img src="./assets/info.png" alt="" class="info" />
-        </li>
-        <div class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Containers</span>
-            <img src="./assets/info.png" alt="" class="info" />
+
+    <h1 class="name">Kevin Alavik</h1>
+    <h4 class="handle animate">@pufferisadev</h4>
+    <p class="about">
+      Hey im puffer and im a 13 year old developer from sweden.
+    <p>
+      More info <a href="https://puffer.is-a.dev/old.html" style="text-decoration: underline;">here</a>
+    </p>
+    </p>
+    <div class="socials">
+      <p align="center" style="margin-bottom: 1rem">(tips: click the cards)</p>
+      <div class="card github" onclick="window.open('https://github.com/kevinalavik', '_parent')">
+        <div class="first">
+          <i class="fa-brands fa-github icon"></i>
+          <p>Github</p>
         </div>
-        <div class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>MobileSoftwareUpdate</span>
-            <img src="./assets/info.png" alt="" class="info" />
+        <div class="text">
+          <p>
+            Go to my github profile to get the source code of my projects
+          </p>
         </div>
-        <div class="folder">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Media</span>
-            <img src="./assets/info.png" alt="" class="info" />
+      </div>
+      <div class="card twitter" onclick="window.open('https://twitter.com/pufferisadev', '_parent')">
+        <div class="first">
+          <i class="fa-brands fa-twitter icon twitterIcon"></i>
+          <p>Twitter</p>
         </div>
-        <div class="folder" style="border: none">
-            <img class="icn" src="./assets/folder.png" alt="Folder" />
-            <span>Appdivcations</span>
-            <img src="./assets/info.png" alt="" class="info" />
+        <div class="text">
+          <p>Follow my twitter for daily shitposting</p>
         </div>
-    </div>
-    <!-- MY PAGE -->
-    <div class="folders" id="myPage">
-        <div class="folder" style="border: none; margin-bottom: 10px" onclick="aboutMeLoad()">
-            <img class="icn" src="./assets/txt.png" alt="Txt" />
-            <span>aboutMe.txt</span>
-            <img src="./assets/info.png" alt="" class="info" />
+      </div>
+      <div class="card discord" onclick="window.open('https://discord.gg/Ateu2PUYqF', '_parent')">
+        <div class="first">
+          <i class="fa-brands fa-discord icon discordIcon"></i>
+          <p>Discord</p>
         </div>
-        <div class="folder" style="border: none; margin-bottom: 10px" onclick="socialsLoad()">
-            <img class="icn" src="./assets/txt.png" alt="Txt" />
-            <span>socials.txt</span>
-            <img src="./assets/info.png" alt="" class="info" />
+        <div class="text">
+          <p>Join my discord server to get notifications on new releases</p>
         </div>
-        <div class="folder" style="border: none; margin-bottom: 10px" onclick="projectsLoad()">
-            <img class="icn" src="./assets/txt.png" alt="Txt" />
-            <span>projects.txt</span>
-            <img src="./assets/info.png" alt="" class="info" />
+      </div>
+      <div class="card youtube" onclick="window.open('https://youtube.com/@pufferisadev', '_parent')">
+        <div class="first">
+          <i class="fa-brands fa-youtube icon youtubeIcon"></i>
+          <p>Youtube</p>
         </div>
+        <div class="text">
+          <p>Feel free to subscribe! Video up soon</p>
+        </div>
+      </div>
+      <div class="card mastodon" onclick="window.open('https://mstdn.social/@puffer', '_parent')">
+        <div class="first">
+          <i class="fa-brands fa-mastodon icon mastodonIcon"></i>
+          <p>Mastodon</p>
+        </div>
+        <div class="text">
+          <p>Sometimes i decide to post semi serious things</p>
+        </div>
+      </div>
     </div>
-    <div class="folders" id="aboutMe">
-        <span style="me">My name is Kevin, aka puffer. And i like to code. I am from a small town in Sweden.</span>
-        <br>
-        <br>
-        <span>Current Skils:</span>
-        <br>
-        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> HTML</a>
-        <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> CSS</a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="32.5" height="32.5"/> JavaScript</a>
-        <a href="https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="javascript" width="35" height="32.5"/> C</a>
-        <a href="https://docs.python.org/3/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="javascript" width="35" height="32.5"/> Python</a>
-        <a href="https://nodejs.org/en/docs/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="javascript" width="35" height="32.5"/> NodeJS</a>
-        <a href="https://www.electronjs.org/docs/latest/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" alt="javascript" width="35" height="32.5"/>ElectronJS</a>
-        <a href="https://www.swift.org/documentation/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="javascript" width="35" height="32.5"/> Swift</a>
-        <br>
-        <br>
-        <span>I have been coding for 3 years now! And i first started with simple HTML sites that looked like they where from 1999</span>
-        <br>
-        <br>
-        <span>I am always learning new langauges and libaries!</span>
-        <br>
-        <br>
-        <span>Langauges i can speak:</span>
-        <br>
-        <span>Swedish - fluent</span>
-        <br>
-        <span>English - kinda fluent</span>
-        <br>
-        <span>Spanish - only some basics (currently learning)</span>
-    </div>
-    <div class="folders" id="socials">
-        <a href="https://github.com/KevinAlavik">Github</a>
-        <a href="https://twitter.com/pufferisadev">Twitter</a>
-        <a href="https://t.me/itspuffer">Telegram</a>
-        <span>Discord: puffer#5823</span>
-    </div>
-    <div class="folders" id="projects">
-        <span>My current projects:</span>
-        <br>
-        <br>
-        <div class="project" onclick="window.open('https://github.com/ProtonIDE')"><img src="https://avatars.githubusercontent.com/u/123782613?s=35&v=4" style="border-radius: 10px" alt=""></img><span>Proton, is my code editor. (WIP)</span></div>
-        <div class="project"><img src="/assets/scylla-logo.png" style="border-radius: 10px; width: 35px; height: 35px" alt=""></img><span>Scylla, is my App Store for iOS. (WIP)</span></div>
-        <div class="project"><img src="/assets/scythe.png" style="border-radius: 10px; width: 35px; height: 35px" alt=""></img><span>Scythe, is a tool to "unlock you phone". (WIP)</span></div>
-        <br>
-        <br>
-        <span>Discontinued projects:</span>
-        <br>
-        <br>
-        <div class="project" onclick="window.open('https://github.com/KevinAlavik/hydrogen-sourcw')"><img src="/assets/hydrogen-logo.jpg" style="border-radius: 10px; width: 35px; height: 35px" alt=""></img><span>Hydrogen, A 3rd party App Store</span></div>
-    </div>
-    <div class="diskInfo" id="diskInfo">
-        <span>/dev/disk1s2</span>
-        <span>3,69 GB</span>
-        <span id="items">8 item(s)</span>
-    </div>
-    <div class="bottom">
-        <img src="./assets/clipboard.png" alt="clipboard" />
-        <img src="./assets/clock.png" alt="clock" />
-        <img src="./assets/star.png" alt="star" />
-        <img src="./assets/setting.png" alt="settings" />
-        <img src="./assets/2screen.png" alt="two screens" />
-    </div>
+    <p>Other things <3 </p>
+        <div class="other">
+          <iframe src="https://github.com/sponsors/KevinAlavik/button" title="Sponsor KevinAlavik" height="32"
+            width="114" style="border: 0; border-radius: 6px;"></iframe>
+          <br>
+          <a href="https://www.buymeacoffee.com/pufferisadev" target="_blank"><img
+              src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee"
+              style="height: 32px !important;width: 120px !important;"></a>
+        </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
