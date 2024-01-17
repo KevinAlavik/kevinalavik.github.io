@@ -9,6 +9,10 @@
 
     <h1>Kernel Image Format (KIF) Specification</h1>
 
+    <p>This specification outlines the simple ASCII text format of the Kernel Image Format (KIF), representing images using RGB pixel data in a text file.</p>
+
+    <p>This format intentionally avoids the use of magic numbers and complex specifications, keeping it straightforward and human-readable.</p>
+
     <p>This specification is based on the KIF header file available in the following GitHub repository:</p>
 
     <p><a href="https://github.com/kevinalavik/kif" target="_blank">https://github.com/kevinalavik/kif</a></p>
@@ -19,7 +23,7 @@
 
     <h2>Format Overview</h2>
 
-    <p>The Kernel Image Format (KIF) is a text-based image format that represents images using RGB pixel data in a text file.</p>
+    <p>The Kernel Image Format (KIF) uses a simple ASCII text format without relying on magic numbers or complex specifications.</p>
 
     <h2>File Format</h2>
 
@@ -32,8 +36,8 @@
     <h2>Example</h2>
 
     <p>Consider the following example of a 3x3 image:</p>
-
-    <pre>
+    <code>
+        <pre>
         3 3
         255 0 0
         0 255 0
@@ -44,13 +48,23 @@
         128 128 128
         0 0 0
         255 255 255
-    </pre>
+        </pre>
+    </code>
 
     <p>This represents a 3x3 image where each row represents the RGB values of pixels in the image.</p>
 
     <h2>Usage</h2>
 
     <p>KIF images are used in the kernel to display simple images like logos and icons.</p>
+
+    <h2>Tools</h2>
+
+    <p>For working with KIF images, you can use the following tools:</p>
+
+    <ul>
+        <li><a href="https://kevinalavik.github.io/kifv" target="_blank">KIF Viewer (kifv)</a> - A tool for viewing KIF images.</li>
+        <li><a href="https://kevinalavik.github.io/kifg" target="_blank">KIF Generator (kifg)</a> - A tool for generating KIF images.</li>
+    </ul>
 
 </body>
 </html>
