@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kernel Image Format (KIF) Specification</title>
+</head>
+<body>
+
+    <h1>Kernel Image Format (KIF) Specification</h1>
+
+    <p>This specification is based on the KIF header file available in the following GitHub repository:</p>
+
+    <p><a href="https://github.com/kevinalavik/kif" target="_blank">https://github.com/kevinalavik/kif</a></p>
+
+    <p>You can find the KIF header file at the following location:</p>
+
+    <p><a href="https://github.com/kevinalavik/kif/tree/main/kif.h" target="_blank">https://github.com/kevinalavik/kif/tree/main/kif.h</a></p>
+
+    <h2>Format Overview</h2>
+
+    <p>The Kernel Image Format (KIF) is a text-based image format that represents images using RGB pixel data in a text file.</p>
+
+    <h2>File Format</h2>
+
+    <h3>Header</h3>
+    <p>The file format consists of a header section followed by pixel data. The header contains two integers separated by a space representing the image width and height, respectively.</p>
+
+    <h3>Pixel Data</h3>
+    <p>Each line after the header contains RGB values for a single pixel. RGB values are represented as integers in the range 0-255. Each line contains three space-separated integers representing the red, green, and blue values of a pixel.</p>
+
+    <h2>Example</h2>
+
+    <p>Consider the following example of a 3x3 image:</p>
+
+    <pre>
+        3 3
+        255 0 0
+        0 255 0
+        0 0 255
+        255 255 0
+        255 0 255
+        0 255 255
+        128 128 128
+        0 0 0
+        255 255 255
+    </pre>
+
+    <p>This represents a 3x3 image where each row represents the RGB values of pixels in the image.</p>
+
+    <h2>Usage</h2>
+
+    <p>KIF images are used in the kernel to display simple images like logos and icons.</p>
+
+</body>
+</html>
