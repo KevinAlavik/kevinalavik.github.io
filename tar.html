@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USTAR Format Specification</title>
+</head>
+<body>
+
+<h1>USTAR Format Specification</h1>
+<p>The USTAR format is a standard TAR archive format. This example focuses on a minimalist subset of USTAR, supporting plain files and directories. The header structure includes various fields, such as filename, mode, uid, gid, size, mtime, chksum, and typeflag.</p>
+<h2>TarHeader Struct</h2>
+<pre>
+struct TarHeader {
+  char filename[100];
+  char mode[8];
+  char uid[8];
+  char gid[8];
+  char size[12];
+  char mtime[12];
+  char chksum[8];
+  char typeflag[1];
+};
+</pre>
+
+
+<h4>TAR Header Fields</h4>
+
+<ul>
+  <li><strong>filename:</strong> The name of the file or directory. Null-terminated; may include the full path.</li>
+  <li><strong>mode:</strong> File permission mode, represented in octal.</li>
+  <li><strong>uid:</strong> Owner's user ID, represented in octal.</li>
+  <li><strong>gid:</strong> Group's user ID, represented in octal.</li>
+  <li><strong>size:</strong> Size of the file in octal (base-8).</li>
+  <li><strong>mtime:</strong> Modification time of the file in octal.</li>
+  <li><strong>chksum:</strong> Checksum for the header to verify integrity.</li>
+  <li><strong>typeflag:</strong> Type of file (regular file, directory, etc.).</li>
+</ul>
+
+<h2>File Struct</h2>
+<pre>
+struct File {
+  char *name;
+  char *content;
+  unsigned int size;
+  int isDirectory;
+};
+</pre>
+
+<h2>Tar Struct</h2>
+<pre>
+struct Tar {
+  struct File *files;
+  unsigned int fileCount;
+};
+</pre>
+
+<h2>Functions</h2>
+
+<h3>getsize</h3>
+<pre>
+unsigned int getsize(const char *in) {
+  unsigned int size = 0;
+  unsigned int count = 1;
+
+  for (int j = 11; j > 0; j--, count *= 8)
+    size += ((in[j - 1] - '0') * count);
+
+  return size;
+}
+</pre>
+
+<h3>extractTarData</h3>
+<pre>
+void extractTarData(const char *rawData, unsigned int dataSize, struct Tar *tar) {
+  tar->files = NULL;
+  tar->fileCount = 0;
+
+  for (unsigned int offset = 0; offset < dataSize;) {
+    struct TarHeader *header = (struct TarHeader *)(rawData + offset);
+
+    if (header->filename[0] == '\0') {
+      break;
+    }
+
+    struct File file;
+    file.size = getsize(header->size);
+    file.name = strdup(header->filename);
+    file.isDirectory = header->typeflag[0] == '5';
+
+    if (!file.isDirectory) {
+      file.content = (char *)malloc(file.size + 1);
+      memcpy(file.content, rawData + offset + 512, file.size);
+      file.content[file.size] = '\0';
+    } else {
+      file.content = NULL;
+    }
+
+    tar->files =
+        realloc(tar->files, (tar->fileCount + 1) * sizeof(struct File));
+    tar->files[tar->fileCount] = file;
+    tar->fileCount++;
+
+    offset += ((file.size + 511) / 512 + 1) * 512;
+  }
+}
+</pre>
+
+<h3>printFileContent</h3>
+<pre>
+void printFileContent(const struct File *file) {
+  printf("Name: %s\n", file->name);
+  printf("Type: %s\n", file->isDirectory ? "Directory" : "File");
+  printf("Size: %u bytes\n", file->size);
+  if (!file->isDirectory) {
+    printf("Content:\n%s\n\n", file->content);
+  } else {
+    printf("Content: (Not available for directories)\n\n");
+  }
+}
+</pre>
+
+<h3>printTarContents</h3>
+<pre>
+void printTarContents(const struct Tar *tar) {
+  for (unsigned int i = 0; i < tar->fileCount; ++i) {
+    printFileContent(&tar->files[i]);
+  }
+}
+</pre>
+
+<h3>freeTar</h3>
+<pre>
+void freeTar(struct Tar *tar) {
+  for (unsigned int i = 0; i < tar->fileCount; ++i) {
+    free(tar->files[i].name);
+    free(tar->files[i].content);
+  }
+  free(tar->files);
+}
+</pre>
+
+<h2>Example Usage</h2>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct TarHeader {
+  char filename[100];
+  char mode[8];
+  char uid[8];
+  char gid[8];
+  char size[12];
+  char mtime[12];
+  char chksum[8];
+  char typeflag[1];
+};
+
+struct File {
+  char *name;
+  char *content;
+  unsigned int size;
+  int isDirectory;
+};
+
+struct Tar {
+  struct File *files;
+  unsigned int fileCount;
+};
+
+unsigned int getsize(const char *in) {
+  unsigned int size = 0;
+  unsigned int count = 1;
+
+  for (int j = 11; j > 0; j--, count *= 8)
+    size += ((in[j - 1] - '0') * count);
+
+  return size;
+}
+
+void extractTarData(const char *rawData, unsigned int dataSize, struct Tar *tar) {
+  tar->files = NULL;
+  tar->fileCount = 0;
+
+  for (unsigned int offset = 0; offset < dataSize;) {
+    struct TarHeader *header = (struct TarHeader *)(rawData + offset);
+
+    if (header->filename[0] == '\0') {
+      break;
+    }
+
+    struct File file;
+    file.size = getsize(header->size);
+    file.name = strdup(header->filename);
+    file.isDirectory = header->typeflag[0] == '5';
+
+    if (!file.isDirectory) {
+      file.content = (char *)malloc(file.size + 1);
+      memcpy(file.content, rawData + offset + 512, file.size);
+      file.content[file.size] = '\0';
+    } else {
+      file.content = NULL;
+    }
+
+    tar->files =
+        realloc(tar->files, (tar->fileCount + 1) * sizeof(struct File));
+    tar->files[tar->fileCount] = file;
+    tar->fileCount++;
+
+    offset += ((file.size + 511) / 512 + 1) * 512;
+  }
+}
+
+void printFileContent(const struct File *file) {
+  printf("Name: %s\n", file->name);
+  printf("Type: %s\n", file->isDirectory ? "Directory" : "File");
+  printf("Size: %u bytes\n", file->size);
+  if (!file->isDirectory) {
+    printf("Content: %s\n\n", file->content);
+  } else {
+    printf("Content: (Not available for directories)\n\n");
+  }
+}
+
+void printTarContents(const struct Tar *tar) {
+  for (unsigned int i = 0; i < tar->fileCount; ++i) {
+    printFileContent(&tar->files[i]);
+  }
+}
+
+void freeTar(struct Tar *tar) {
+  for (unsigned int i = 0; i < tar->fileCount; ++i) {
+    free(tar->files[i].name);
+    free(tar->files[i].content);
+  }
+  free(tar->files);
+}
+
+int main() {
+  FILE *tarFile = fopen("example.tar", "rb");
+
+  if (!tarFile) {
+    perror("Error opening example.tar file");
+    return 1;
+  }
+
+  fseek(tarFile, 0, SEEK_END);
+  long fileSize = ftell(tarFile);
+  fseek(tarFile, 0, SEEK_SET);
+
+  char *rawTarData = (char *)malloc(fileSize);
+  fread(rawTarData, 1, fileSize, tarFile);
+
+  fclose(tarFile);
+
+  struct Tar tar;
+  extractTarData(rawTarData, fileSize, &tar);
+  printTarContents(&tar);
+  freeTar(&tar);
+  free(rawTarData);
+
+  return 0;
+}
+</pre>
+
+</body>
+</html>
