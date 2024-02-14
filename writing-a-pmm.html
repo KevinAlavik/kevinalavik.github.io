@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kernel Image Format (KIF) Specification</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Writing a PMM (Physical Memory Manager)</h1>
+    <strong>(This is a work in progress!)</strong>
+    <p>
+      This is the guide I wish I had when I wrote my
+      <strong>bitmap</strong> PMM.
+    </p>
+    <h2>The idea</h2>
+    <p>
+      So, a <strong>bitmap PMM</strong> works by representing physical memory as
+      a bitmap, where each bit corresponds to a page of memory (<strong
+        >4096 bytes</strong
+      >). This technique efficiently tracks which pages are free and which are
+      allocated. When a memory allocation request is made, the PMM scans the
+      bitmap to find contiguous free pages, marks them as allocated, and returns
+      the address of the allocated memory block. Similarly, when memory is
+      deallocated, the corresponding bits in the bitmap are cleared, making the
+      pages available for future allocations. This method provides a simple and
+      effective way to manage physical memory in operating systems. To make something like this in C its actually pretty easy (if you are
+      using a bootloader like limine, we will use limine in this example). We
+      first need to get a "map" of the physical memory in limine this is easier
+      said then done. First we will need to make a "memmap_request", to do this you simply add this:
+<pre>
+volatile struct limine_memmap_request memmap_request = {
+    .id = LIMINE_MEMMAP_REQUEST,
+    .revision = 0
+};</pre>
+  <p>This creates a request to the limine bootloader saying like: "Hey i want to get a map over the physical memory!" then to store the response in a memmap simply add this:</p></p>
+  <pre>
+volatile struct limine_memmap_response *memmap;
+memmap = memmap_request.response;</pre>  
+  </body>
+</html>

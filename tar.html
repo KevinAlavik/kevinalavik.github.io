@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>USTAR Format (Unix Standrad TAR) Specification</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USTAR Format (Unix Standrad TAR) Specification</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<h1>USTAR Format (Unix Standrad TAR) Specification</h1>
-<p>The USTAR format is a standard TAR archive format. This example focuses on a minimalist subset of USTAR, supporting plain files and directories. The header structure includes various fields, such as filename, mode, uid, gid, size, mtime, chksum, and typeflag.</p>
-<h2>TarHeader Struct</h2>
-<pre>
+  <body>
+    <h1>USTAR Format (Unix Standrad TAR) Specification</h1>
+    <p>
+      The USTAR format is a standard TAR archive format. This example focuses on
+      a minimalist subset of USTAR, supporting plain files and directories. The
+      header structure includes various fields, such as filename, mode, uid,
+      gid, size, mtime, chksum, and typeflag.
+    </p>
+    <p>* This will be rewritten soon</p>
+    <br />
+    <h2>TarHeader Struct</h2>
+    <pre>
 struct TarHeader {
   char filename[100];
   char mode[8];
@@ -21,44 +29,61 @@ struct TarHeader {
   char chksum[8];
   char typeflag[1];
 };
-</pre>
+</pre
+    >
+    <br />
+    <br />
+    <h4>TAR Header Fields</h4>
 
+    <ul>
+      <li>
+        <strong>filename:</strong> The name of the file or directory.
+        Null-terminated; may include the full path.
+      </li>
+      <li>
+        <strong>mode:</strong> File permission mode, represented in octal.
+      </li>
+      <li><strong>uid:</strong> Owner's user ID, represented in octal.</li>
+      <li><strong>gid:</strong> Group's user ID, represented in octal.</li>
+      <li><strong>size:</strong> Size of the file in octal (base-8).</li>
+      <li><strong>mtime:</strong> Modification time of the file in octal.</li>
+      <li>
+        <strong>chksum:</strong> Checksum for the header to verify integrity.
+      </li>
+      <li>
+        <strong>typeflag:</strong> Type of file (regular file, directory, etc.).
+      </li>
+    </ul>
+    <br />
 
-<h4>TAR Header Fields</h4>
-
-<ul>
-  <li><strong>filename:</strong> The name of the file or directory. Null-terminated; may include the full path.</li>
-  <li><strong>mode:</strong> File permission mode, represented in octal.</li>
-  <li><strong>uid:</strong> Owner's user ID, represented in octal.</li>
-  <li><strong>gid:</strong> Group's user ID, represented in octal.</li>
-  <li><strong>size:</strong> Size of the file in octal (base-8).</li>
-  <li><strong>mtime:</strong> Modification time of the file in octal.</li>
-  <li><strong>chksum:</strong> Checksum for the header to verify integrity.</li>
-  <li><strong>typeflag:</strong> Type of file (regular file, directory, etc.).</li>
-</ul>
-
-<h2>File Struct</h2>
-<pre>
+    <h2>File Struct</h2>
+    <pre>
 struct File {
   char *name;
   char *content;
   unsigned int size;
   int isDirectory;
 };
-</pre>
+</pre
+    >
 
-<h2>Tar Struct</h2>
-<pre>
+    <br />
+    <br />
+    <h2>Tar Struct</h2>
+    <pre>
 struct Tar {
   struct File *files;
   unsigned int fileCount;
 };
-</pre>
+</pre
+    >
 
-<h2>Functions</h2>
+    <br />
+    <br />
+    <h2>Functions</h2>
 
-<h3>getsize</h3>
-<pre>
+    <h3>getsize</h3>
+    <pre>
 unsigned int getsize(const char *in) {
   unsigned int size = 0;
   unsigned int count = 1;
@@ -68,10 +93,11 @@ unsigned int getsize(const char *in) {
 
   return size;
 }
-</pre>
+</pre
+    >
 
-<h3>extractTarData</h3>
-<pre>
+    <h3>extractTarData</h3>
+    <pre>
 void extractTarData(const char *rawData, unsigned int dataSize, struct Tar *tar) {
   tar->files = NULL;
   tar->fileCount = 0;
@@ -104,10 +130,11 @@ void extractTarData(const char *rawData, unsigned int dataSize, struct Tar *tar)
     offset += ((file.size + 511) / 512 + 1) * 512;
   }
 }
-</pre>
+</pre
+    >
 
-<h3>printFileContent</h3>
-<pre>
+    <h3>printFileContent</h3>
+    <pre>
 void printFileContent(const struct File *file) {
   printf("Name: %s\n", file->name);
   printf("Type: %s\n", file->isDirectory ? "Directory" : "File");
@@ -118,19 +145,21 @@ void printFileContent(const struct File *file) {
     printf("Content: (Not available for directories)\n\n");
   }
 }
-</pre>
+</pre
+    >
 
-<h3>printTarContents</h3>
-<pre>
+    <h3>printTarContents</h3>
+    <pre>
 void printTarContents(const struct Tar *tar) {
   for (unsigned int i = 0; i < tar->fileCount; ++i) {
     printFileContent(&tar->files[i]);
   }
 }
-</pre>
+</pre
+    >
 
-<h3>freeTar</h3>
-<pre>
+    <h3>freeTar</h3>
+    <pre>
 void freeTar(struct Tar *tar) {
   for (unsigned int i = 0; i < tar->fileCount; ++i) {
     free(tar->files[i].name);
@@ -138,11 +167,14 @@ void freeTar(struct Tar *tar) {
   }
   free(tar->files);
 }
-</pre>
+</pre
+    >
+    <br />
+    <br />
 
-<h2>Example Usage</h2>
+    <h2>Example Usage</h2>
 
-<pre>
+    <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;string.h&gt;
@@ -263,7 +295,7 @@ int main() {
 
   return 0;
 }
-</pre>
-
-</body>
+</pre
+    >
+  </body>
 </html>

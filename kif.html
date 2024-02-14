@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kernel Image Format (KIF) Specification</title>
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Kernel Image Format (KIF) Specification</h1>
 
-    <p>This specification outlines the simple ASCII text format of the Kernel Image Format (KIF), representing images using RGB pixel data in a text file.</p>
+    <p>
+      This specification outlines the simple ASCII text format of the Kernel
+      Image Format (KIF), representing images using RGB pixel data in a text
+      file.
+    </p>
 
-    <p>This format intentionally avoids the use of magic numbers and complex specifications, keeping it straightforward and human-readable.</p>
+    <p>
+      This format intentionally avoids the use of magic numbers and complex
+      specifications, keeping it straightforward and human-readable.
+    </p>
 
-    <p>This specification is based on the KIF header file available in the following GitHub repository:</p>
+    <p>
+      This specification is based on the KIF header file available in the
+      following GitHub repository:
+    </p>
 
-    <p><a href="https://github.com/KevinAlavik/KernelImageFormat" target="_blank">https://github.com/KevinAlavik/KernelImageFormat</a></p>
+    <p>
+      <a href="https://github.com/KevinAlavik/KernelImageFormat" target="_blank"
+        >https://github.com/KevinAlavik/KernelImageFormat</a
+      >
+    </p>
 
     <p>You can find the KIF header file at the following location:</p>
 
-    <p><a href="https://github.com/KevinAlavik/KernelImageFormat/tree/main/kif.h" target="_blank">https://github.com/KevinAlavik/KernelImageFormat/tree/main/kif.h</a></p>
+    <p>
+      <a
+        href="https://github.com/KevinAlavik/KernelImageFormat/tree/main/kif.h"
+        target="_blank"
+        >https://github.com/KevinAlavik/KernelImageFormat/tree/main/kif.h</a
+      >
+    </p>
 
+    <br />
     <h2>Format Overview</h2>
 
-    <p>The Kernel Image Format (KIF) uses a simple ASCII text format without relying on magic numbers or complex specifications.</p>
-
-    <h2>File Format</h2>
+    <p>
+      The Kernel Image Format (KIF) uses a simple ASCII text format without
+      relying on magic numbers or complex specifications.
+    </p>
 
     <h3>Header</h3>
-    <p>The file format consists of a header section followed by pixel data. The header contains two integers separated by a space representing the image width and height, respectively.</p>
+    <p>
+      The file format consists of a header section followed by pixel data. The
+      header contains two integers separated by a space representing the image
+      width and height, respectively.
+    </p>
 
     <h3>Pixel Data</h3>
-    <p>Each line after the header contains RGB values for a single pixel. RGB values are represented as integers in the range 0-255. Each line contains three space-separated integers representing the red, green, and blue values of a pixel.</p>
+    <p>
+      Each line after the header contains RGB values for a single pixel. RGB
+      values are represented as integers in the range 0-255. Each line contains
+      three space-separated integers representing the red, green, and blue
+      values of a pixel.
+    </p>
 
+    <br />
     <h2>Example</h2>
 
     <p>Consider the following example of a 3x3 image:</p>
-    <code>
     <pre>
 3 3
 255 0 0       
@@ -49,22 +80,38 @@
 0 0 0
 255 255 255
     </pre>
-    </code>
 
-    <p>This represents a 3x3 image where each row represents the RGB values of pixels in the image.</p>
+    <p>
+      This represents a 3x3 image where each row represents the RGB values of
+      pixels in the image.
+    </p>
 
+    <br />
     <h2>Usage</h2>
 
-    <p>KIF images are used in the kernel to display simple images like logos and icons.</p>
+    <p>
+      KIF images are used in the kernel to display simple images like logos and
+      icons.
+    </p>
 
+    <br />
     <h2>Tools</h2>
 
     <p>For working with KIF images, you can use the following tools:</p>
 
     <ul>
-        <li><a href="https://kevinalavik.github.io/kifv" target="_blank">KIF Viewer (kifv)</a> - A tool for viewing KIF images.</li>
-        <li><a href="https://kevinalavik.github.io/kifg" target="_blank">KIF Generator (kifg)</a> - A tool for generating KIF images.</li>
+      <li>
+        <a href="https://kevinalavik.github.io/kifv" target="_blank"
+          >KIF Viewer (kifv)</a
+        >
+        - A tool for viewing KIF images.
+      </li>
+      <li>
+        <a href="https://kevinalavik.github.io/kifg" target="_blank"
+          >KIF Generator (kifg)</a
+        >
+        - A tool for generating KIF images.
+      </li>
     </ul>
-
-</body>
+  </body>
 </html>
