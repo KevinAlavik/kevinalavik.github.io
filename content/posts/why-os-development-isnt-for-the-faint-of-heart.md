@@ -6,14 +6,15 @@ author: "Kevin Alavik"
 draft: false 
 description: "An honest look at the harsh realities of OS development, from debugging to isolation."
 url: "/posts/why-os-development-isnt-for-the-faint-of-heart/"
-image: "/images/osdev-article.jpg"
 series: ["OS Development Journey"]
 categories: ["Development", "OS Development"]
+cover:
+    image: images/guys-i-can-learn-c-with-osdev.gif
 ---
 
 ### Introduction
 
-OS development isn’t some quick, glamorous project you can knock out in a weekend. It’s a brutal, grindy process. You’ll spend countless hours—or even days—staring at code and chasing down bugs, just to make something as simple as "Hello, World!" work. It’s frustrating, tedious, and requires a level of persistence most people don’t have. If you’re looking for instant results, you’re in the wrong place.
+OS development isn’t some quick, glamorous project you can knock out in a weekend. It’s a brutal, unforgiving process. You’ll spend countless hours—or even days—staring at code and chasing down bugs, just to make something as simple as "Hello, World!" work. It’s frustrating, tedious, and requires a level of persistence most people don’t have. If you’re looking for instant results, you’re in the wrong place.
 
 ### The Reality of Debugging
 
@@ -25,13 +26,13 @@ When it comes to OS development, no one’s going to hold your hand. There’s n
 
 ### RTFM: The Most Common Thing You’ll Hear—and It’s True
 
-“RTFM.” It’s the most common piece of advice you’ll hear when working on OS development, and trust me—it’s true. You will have to read the fucking manual, over and over again. Whether it’s a hardware manual, a CPU specification, or a piece of software documentation, there’s no escaping it. And it’s not easy. The docs are often vague, incomplete, or outdated, but they’re your best shot at figuring out what the hell is going wrong. If you can’t handle this harsh truth, then OS development is not the right path for you. It’s a constant cycle of reading, experimenting, and reading again. But without it, you’ll be stuck spinning your wheels, never making progress.
+“RTFM.” It’s the most common piece of advice you’ll hear when working on OS development, and trust me—it’s true. You will have to read the fucking manual, over and over again. Whether it’s a hardware manual, a CPU specification, or a piece of software documentation, there’s no escaping it. And it’s not easy. The docs are often vague, incomplete, or outdated, but they’re your best shot at figuring out what the heck is going wrong. If you can’t handle this harsh truth, then OS development is not the right path for you. It’s a constant cycle of reading, experimenting, and reading again. But without it, you’ll be stuck spinning your wheels, never making progress.
 
 ### Realistic Goals: Don’t Expect to Build a Windows or Linux Clone
 
 Let’s face it—if you’re thinking you’re going to build a fully-fledged operating system that can compete with Windows, Linux, or macOS, you’re setting yourself up for failure. OS development is not about replicating multi-billion-dollar systems that took decades to build. Look at ReactOS—it’s been in development for over 20 years and still only has about 70% compatibility with Windows XP. That’s just one example, but it highlights the point: even the most ambitious projects take an enormous amount of time and effort, and the road is long and full of setbacks.
 
-You’re not going to be running Photoshop or playing AAA games on your OS anytime soon. Hell, you might not even get a basic desktop environment working in your first few years. If you’re expecting that kind of result quickly, you’re living in a fantasy. The reality is that OS development takes time—years, in some cases—and the majority of what you’ll be doing is building basic functionality like memory management, process handling, and file systems. Don’t expect to get everything working in a few months, or even a few years. Your first “OS” might be nothing more than a simple bootloader, and that’s fine. Aim for small, manageable goals and celebrate the tiny victories. The big stuff? That comes way later.
+You’re not going to be running Photoshop or playing AAA games on your OS anytime soon. Heck, you might not even get a basic desktop environment working in your first few years. If you’re expecting that kind of result quickly, you’re living in a fantasy. The reality is that OS development takes time—years, in some cases—and the majority of what you’ll be doing is building basic functionality like memory management, process handling, and file systems. Don’t expect to get everything working in a few months, or even a few years. Your first “OS” might be nothing more than a simple bootloader, and that’s fine. Aim for small, manageable goals and celebrate the tiny victories. The big stuff? That comes way later.
 
 ### Prepare for Isolation and Loneliness
 
@@ -45,7 +46,7 @@ OS development isn’t like following an easy tutorial. If you don’t know how 
 
 If you’re entering the OS development community, be prepared to deal with some serious gatekeeping. Many people in this space have been doing it for years and aren’t exactly welcoming to newcomers. You’ll see condescending comments, “git gud” replies, and harsh criticisms of your questions or progress. It’s a community where experience is highly valued, and if you don’t show that you’ve spent *significant* time working through issues on your own, you’re likely to get brushed off or mocked. So, if you’re someone who’s easily discouraged by criticism or isn’t comfortable with people who hold your progress to a high standard, OS development might not be for you. You’re going to need thick skin and a lot of patience to deal with this.
 
-### You’re Gonna Want to Quit, A Lot
+### You’re Going to Want to Quit, A Lot
 
 The most brutal truth is that there will be moments where you want to give up, quit, and never look back. Whether it’s from the overwhelming frustration of getting nothing to work or because you're stuck on an issue that seems unsolvable, it’ll hit you hard. You’ll face moments where you’re questioning why you even started. But that's the thing about OS development—it’s a marathon, not a sprint. If you don’t have the mental toughness to push through those moments of doubt, then the road is going to be even harder than it already is.
 

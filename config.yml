@@ -40,6 +40,9 @@ params:
   showtoc: false
   tocopen: false
 
+  assets:
+    disableHLJS: true
+
   homeInfoParams:
     Title: "Welcome to my blog!"
     Content: "Join me on my rants and exploration regarding low-level shenanigans"
@@ -47,11 +50,6 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/kevinalavik"
-
-  cover:
-    hidden: true
-    hiddenInList: true
-    hiddenInSingle: true
 
   editPost:
     URL: "https://github.com/kevinalavik/blog/content"
