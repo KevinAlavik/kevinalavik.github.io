@@ -42,14 +42,22 @@ params:
 
   assets:
     disableHLJS: true
-
+  
   homeInfoParams:
-    Title: "Welcome to my blog!"
-    Content: "Join me on my rants and exploration regarding low-level shenanigans"
+    Title: "👋 Welcome to my blog!"
+    Content: "Hello, I'm **Kevin Alavik**, a **hobbyist operating system developer** from **Sweden**. I specialize in low-level programming and have a deep interest in the inner workings of computers and software. Through this blog, I share my thoughts, experiences, and occasional rants on topics like **tech**, **programming**, and **operating systems**. Feel free to explore my posts as I delve into the world of **low-level development**."
 
   socialIcons:
-    - name: github
+    - name: github  
       url: "https://github.com/kevinalavik"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/19022062/kevin-alavik"
+    - name: paypal
+      url: "https://www.paypal.me/kevinalavik"
+    - name: discord
+      url: "https://discord.com/users/1182552623182790660"
+    - name: rss
+      url: "https://kevinalavik.github.io/posts/index.xml"
 
   editPost:
     URL: "https://github.com/kevinalavik/blog/content"
