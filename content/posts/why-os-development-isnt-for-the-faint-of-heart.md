@@ -16,9 +16,11 @@ cover:
 
 OS development isn’t some quick, glamorous project you can knock out in a weekend. It’s a brutal, unforgiving process. You’ll spend countless hours—or even days—staring at code and chasing down bugs, just to make something as simple as "Hello, World!" work. It’s frustrating, tedious, and requires a level of persistence most people don’t have. If you’re looking for instant results, you’re in the wrong place.
 
-### The Reality of Debugging
+### The Reality of Debugging  
 
-Debugging in OS development is not like debugging a regular application. There are no fancy debuggers, no step-throughs of high-level code—you’re dealing with raw hardware and memory, and one wrong byte can bring your whole system crashing down. You'll often find yourself stuck for days, trying to figure out why your kernel panics or why certain hardware isn’t responding the way you expect. It's a mental battle, and sometimes the simplest issues take days to identify and fix. If you're not prepared for the frustration of staring at a blank screen for hours, this might not be the path for you.
+*(Note: While some debugging tools exist—such as GDB for certain setups—debugging in OS development is still a challenge. Unlike debugging user-space applications, you often deal with limited visibility, no standard runtime, and hardware-specific behavior that makes traditional debugging approaches less straightforward.)*  
+
+Debugging in OS development is not like debugging a regular application. There are no fancy debuggers, no step-throughs of high-level code—you’re dealing with raw hardware and memory, and one wrong byte can bring your whole system crashing down. You'll often find yourself stuck for days, trying to figure out why your kernel panics or why certain hardware isn’t responding the way you expect. It's a mental battle, and sometimes the simplest issues take days to identify and fix. If you're not prepared for the frustration of staring at a blank screen for hours, this might not be the path for you.  
 
 ### You’re On Your Own: RTFM or Fail
 
