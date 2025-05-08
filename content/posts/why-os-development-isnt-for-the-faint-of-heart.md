@@ -3,7 +3,8 @@ title: "Why OS Development Isn't for the Faint of Heart"
 date: 2025-03-10T00:00:00Z
 tags: ["osdev", "low-level", "programming"]
 author: "Kevin Alavik"
-draft: false 
+draft: false
+weight: 1
 description: "An honest look at the harsh realities of OS development, from debugging to isolation."
 url: "/posts/why-os-development-isnt-for-the-faint-of-heart/"
 series: ["OS Development Journey"]
