@@ -7,8 +7,6 @@ tags: ["low-level", "AI Generated"]
 
 > ⚠️ **Note:** This post contains **AI-generated** content and expresses strong opinions intended for **rhetorical or entertainment purposes**. It may exaggerate for effect and **does not reflect a balanced technical analysis**
 
-## Why UEFI is Bloat and Computers Belong in the 90s
-
 Remember when computers just worked? You'd hit the power button, hear a satisfying beep, and be greeted by a simple blue screen with white text. No bloated firmware, no cryptic secure boot errors — just your trusty BIOS doing its job like a champion. 
 
 Then along came UEFI, bringing with it a mountain of complexity nobody asked for.
