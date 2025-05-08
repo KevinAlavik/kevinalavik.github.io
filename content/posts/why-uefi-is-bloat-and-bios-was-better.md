@@ -2,7 +2,10 @@
 title: "Why UEFI is Bloat and Computers Belong in the 90s"
 date: 2025-03-10T20:02:00+01:00
 author: "Kevin Alavik"
+tags: ["low-level", "AI Generated"]
 ---
+
+> ⚠️ **Note:** This post contains **AI-generated** content and expresses strong opinions intended for **rhetorical or entertainment purposes**. It may exaggerate for effect and **does not reflect a balanced technical analysis**
 
 ## Why UEFI is Bloat and Computers Belong in the 90s
 

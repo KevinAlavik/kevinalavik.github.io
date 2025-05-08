@@ -2,8 +2,10 @@
 title: "ARM is Bloat: Why We Should Stick to the Beautiful x86 Architecture"
 date: 2025-03-10
 author: "Kevin Alavik"
-tags: ["x86", "ARM", "Architecture", "Rant", "Tech"]
+tags: ["low-level", "AI Generated"]
 ---
+
+> ⚠️ **Note:** This post contains **AI-generated** content and expresses strong opinions intended for **rhetorical or entertainment purposes**. It may exaggerate for effect and **does not reflect a balanced technical analysis**
 
 Ah, ARM. The shiny, overhyped "new" darling of the tech world. Everywhere you look, there's someone singing praises of ARM's "efficiency" and "minimalism." But let’s face it—ARM is nothing but **bloat** disguised as a "revolution." If you really want to get things done, you’ve got to look at the beautiful, timeless, and efficient **x86** architecture. Let’s dive in as I go on a rant about why x86 is the true champion and why ARM is a trainwreck waiting to happen.
 
@@ -34,7 +36,3 @@ Let’s be honest here—if you want to build something that actually lasts, som
 In the end, ARM might have its place in tiny devices and power-constrained environments, but when it comes to raw power, complexity, and true computing beauty, **x86** is the undeniable winner. So let’s stop pretending like ARM is some great marvel and embrace the future of computing with **x86**.
 
 To anyone out there still advocating for ARM—wake up, it's time to **move on** to a real architecture. The **x86** family has stood the test of time and will continue to reign supreme for years to come.
-
----
-
-Stay tuned for more rants on architecture and why **x86** is the true king. Until then, I’ll be here enjoying the beauty of real instruction sets while ARM users try to figure out how to add two numbers with their 16 pathetic registers.
